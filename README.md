@@ -1,43 +1,39 @@
-# 🐹 Piscine Go Nantes 2526
+# Piscine Go, Nantes 2025-2026
 
-## 📘 Description
-Ce dépôt contient l’ensemble des **exercices et algorithmes développés durant la Piscine Go** de Nantes (session 2526).  
-Le projet a pour objectif de renforcer les compétences fondamentales en **programmation Go**, en explorant les bases du langage, la logique algorithmique et la structuration du code.
+Mes exercices de la Piscine Go (Ynov Nantes, plateforme 01 Edu) : une centaine de fonctions écrites sans la bibliothèque standard, pour apprendre Go et l'algorithmique de base.
 
----
+## Organisation
 
-## 🎯 Objectifs pédagogiques
+Chaque exercice suit le même schéma :
 
-- Maîtriser les structures de contrôle, les boucles et les fonctions.  
-- Comprendre la manipulation des chaînes, des tableaux et des pointeurs.  
-- Implémenter des algorithmes classiques (tri, recherche, conversions).  
-- Découvrir les structures avancées : arbres binaires, listes, etc.  
-- Développer un raisonnement rigoureux et une approche modulaire.
+- `nomexercice.go` : la fonction demandée, dans le paquet `piscine` ;
+- `nomexercice/main.go` : un petit programme qui l'appelle pour la tester.
 
----
+Les fonctions n'importent aucun paquet de la bibliothèque standard : tout est réécrit à la main (seul `eightqueens` affiche avec `z01.PrintRune`, la bibliothèque de la Piscine). Les programmes de test, eux, affichent les résultats avec `fmt`.
 
-## 🧩 Structure du projet
+## Thèmes couverts
 
-Chaque dossier correspond à un thème ou à une série d’exercices :
+| Thème | Exemples |
+|---|---|
+| Affichage | `printalphabet`, `printcomb`, `printcombn`, `printnbr`, `printnbrbase` |
+| Chaînes | `strlen`, `strrev`, `capitalize`, `split`, `splitwhitespaces`, `join`, `index`, `compare` |
+| Conversions | `atoi`, `atoibase`, `convertbase`, `nbrconvertalpha` |
+| Mathématiques | `fibonacci`, `isprime`, `findnextprime`, `sqrt`, `recursivepower`, `iterativefactorial` |
+| Tableaux et tris | `sortintegertable`, `sortwordarr`, `advancedsortwordarr`, `issorted`, `makerange`, `map`, `countif` |
+| Pointeurs | `pointone`, `divmod` |
+| Arguments du programme | `printparams`, `revparams`, `sortparams`, `flags`, `displayfile`, `cat` |
+| Listes chaînées | `listpushback`, `listreverse`, `listsort`, `listmerge`, `listremoveif`, `sortlistinsert` |
+| Arbres binaires de recherche (Quest 12) | `btreeinsertdata`, `btreeapplyinorder`, `btreelevelcount`, `btreedeletenode`, `btreetransplant` |
+| Problèmes classiques | `eightqueens` |
 
-| Dossier / Fichier | Description |
-|--------------------|-------------|
-| `basicatoi/`, `atoi.go` | Conversion de chaînes en entiers |
-| `btree/` | Arbres binaires (insertions, parcours, suppression) |
-| `stringutils/` | Manipulation de chaînes de caractères |
-| `math/` | Algorithmes mathématiques (fibonacci, premiers, puissances) |
-| `sort/` | Fonctions de tri et de recherche |
-| `list/` | Gestion de listes chaînées |
-| `print/`, `display/` | Affichage et formatage |
-| `*.go` | Fichiers isolés d’exercices pratiques |
+## Lancer un exercice
 
-> 💡 Chaque exercice est indépendant et peut être exécuté séparément.
+Go 1.23 ou plus récent.
 
----
-
-## ⚙️ Installation et exécution
-
-### 1. Cloner le dépôt
 ```bash
-git clone https://github.com/JustTheJules/Piscine-go-nantes-2526.git
+git clone https://github.com/NardenLaSouris/Piscine-go-nantes-2526.git
 cd Piscine-go-nantes-2526
+go run ./atoi
+```
+
+Remplacer `atoi` par le nom de n'importe quel dossier d'exercice.
